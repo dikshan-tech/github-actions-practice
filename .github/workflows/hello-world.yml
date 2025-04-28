@@ -1,0 +1,14 @@
+name: Say Hello on Push
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print a Welcome Message
+        run: echo "👋 Hello, ${{ github.actor }}! You triggered this GitHub Action!"
